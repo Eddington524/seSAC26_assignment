@@ -20,6 +20,7 @@ class APImanager {
         AF.request(url, headers: header).responseDecodable(of: TrendModel.self) { response in
             switch response.result {
             case .success(let success):
+//                print("success", success)
                 completehandler(success.results)
             case .failure(let failure):
                 print(failure)

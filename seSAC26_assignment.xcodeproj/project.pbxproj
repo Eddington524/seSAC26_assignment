@@ -24,6 +24,8 @@
 		DC460A082B69025C00106F83 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC460A072B69025C00106F83 /* .gitignore */; };
 		DC460A0A2B69029100106F83 /* APIkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A092B69029100106F83 /* APIkey.swift */; };
 		DC460A0C2B6903ED00106F83 /* API_manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0B2B6903ED00106F83 /* API_manager.swift */; };
+		DC460A0E2B69129700106F83 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */; };
+		DC460A102B69131800106F83 /* lineTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0F2B69131800106F83 /* lineTitleLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		DC460A072B69025C00106F83 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DC460A092B69029100106F83 /* APIkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkey.swift; sourceTree = "<group>"; };
 		DC460A0B2B6903ED00106F83 /* API_manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_manager.swift; sourceTree = "<group>"; };
+		DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		DC460A0F2B69131800106F83 /* lineTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineTitleLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				DC4609F22B68EA4300106F83 /* BlackTitleLabel.swift */,
 				DC4609F82B68ECF800106F83 /* PosterImageView.swift */,
+				DC460A0F2B69131800106F83 /* lineTitleLabel.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				DC4609E12B68E29500106F83 /* ViewController.swift */,
 				DC4609F62B68EC1800106F83 /* TrendCollectionViewCell.swift */,
+				DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC460A0E2B69129700106F83 /* MovieTableViewCell.swift in Sources */,
 				DC460A062B68FDEC00106F83 /* TrendModel.swift in Sources */,
 				DC4609E22B68E29500106F83 /* ViewController.swift in Sources */,
 				DC460A0A2B69029100106F83 /* APIkey.swift in Sources */,
@@ -210,6 +217,7 @@
 				DC4609F72B68EC1800106F83 /* TrendCollectionViewCell.swift in Sources */,
 				DC4609DE2B68E29500106F83 /* AppDelegate.swift in Sources */,
 				DC4609E02B68E29500106F83 /* SceneDelegate.swift in Sources */,
+				DC460A102B69131800106F83 /* lineTitleLabel.swift in Sources */,
 				DC460A0C2B6903ED00106F83 /* API_manager.swift in Sources */,
 				DC4609F32B68EA4300106F83 /* BlackTitleLabel.swift in Sources */,
 			);

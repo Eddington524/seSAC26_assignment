@@ -16,6 +16,8 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
+    let titleList:[String] = ["뜨거운 핫 트렌드 영화!", "평점 높은 영화!", "이보다 더 유명할 수 없는 영화"]
+    let tableView  = UITableView()
     
     var movieList:[Movie] = []
    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: ViewController.configureCollectionView())
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
         APImanager.shared.fetchTrendMovieImages { movies in
             self.movieList = movies
             self.collectionView.reloadData()
+            self.tableView.reloadData()
         }
         
     }
@@ -48,6 +51,7 @@ class ViewController: UIViewController {
     
     func configureHierachy() {
         view.addSubview(collectionView)
+        view.addSubview(tableView)
     }
     
     func configureView(){
@@ -55,14 +59,26 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.register(TrendCollectionViewCell.self, forCellWithReuseIdentifier: "TrendCollectionViewCell")
-        collectionView.backgroundColor = .systemMint
+//        collectionView.backgroundColor = .systemMint
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 280
+        
+        tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "MovieTableViewCell")
+        
     }
     
     func setConstraintsView(){
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(12)
-            make.height.equalTo(260)
+            make.height.equalTo(200)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
@@ -83,9 +99,33 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let url = URL(string: "https://image.tmdb.org/t/p/w500/\(item.poster)")
         
         cell.posterImage.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
-        
+        cell.titleLabel.text = item.title
         return cell
     }
     
+    
+}
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titleList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
+        
+        // 아하! cell 안에서도 연결 시켜줘야지!
+        cell.collectionView.delegate = self
+        cell.collectionView.dataSource = self
+        cell.collectionView.register(TrendCollectionViewCell.self, forCellWithReuseIdentifier: "TrendCollectionViewCell")
+        cell.lineTitleLabel.text = titleList[indexPath.row]
+     
+        cell.collectionView.reloadData()
+        
+        
+        return cell
+    }
     
 }

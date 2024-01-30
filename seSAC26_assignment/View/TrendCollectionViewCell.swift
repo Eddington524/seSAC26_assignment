@@ -30,7 +30,7 @@ class TrendCollectionViewCell: UICollectionViewCell {
     
     func configureView(){
 //        posterImage.image = UIImage(systemName: "star")
-        titleLabel.text = "임시타이틀!"
+//        titleLabel.text = "임시타이틀!"
     }
     
     func setupConstraints() {
