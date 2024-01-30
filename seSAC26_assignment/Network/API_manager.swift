@@ -12,18 +12,18 @@ class APImanager {
     
     static let shared = APImanager()
     let header: HTTPHeaders = ["Authorization": APIkey.TMDB]
-    let baseUrl: String = "https://api.themoviedb.org/3/trending/tv/"
+    let baseUrl: String = "https://api.themoviedb.org/3/"
     
     func fetchTVImages(url: String,completehandler: @escaping(([TV]) -> Void)){
         
-        let url = baseUrl + "\(url)"
+        let url = baseUrl + "\(url)" + "?language=ko-KR"
         
         let header = header
         
         AF.request(url, headers: header).responseDecodable(of: TrendModel.self) { response in
             switch response.result {
             case .success(let success):
-                print("success", success)
+//                print("success", success)
                 completehandler(success.results)
             case .failure(let failure):
                 print(failure)
@@ -32,7 +32,7 @@ class APImanager {
         
     }
     
-//    func fetchRatedMovies(){
+//    func fetchTs(){
 //        let url = "https://api.themoviedb.org/3/tv/top_rated"
 //        
 //        let header:

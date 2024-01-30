@@ -26,7 +26,6 @@
 		DC460A0C2B6903ED00106F83 /* API_manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0B2B6903ED00106F83 /* API_manager.swift */; };
 		DC460A0E2B69129700106F83 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */; };
 		DC460A102B69131800106F83 /* lineTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0F2B69131800106F83 /* lineTitleLabel.swift */; };
-		DC460A122B6920D300106F83 /* RatedMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A112B6920D300106F83 /* RatedMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		DC460A0B2B6903ED00106F83 /* API_manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_manager.swift; sourceTree = "<group>"; };
 		DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		DC460A0F2B69131800106F83 /* lineTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineTitleLabel.swift; sourceTree = "<group>"; };
-		DC460A112B6920D300106F83 /* RatedMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatedMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 				DC460A052B68FDEC00106F83 /* TrendModel.swift */,
 				DC460A092B69029100106F83 /* APIkey.swift */,
 				DC460A0B2B6903ED00106F83 /* API_manager.swift */,
-				DC460A112B6920D300106F83 /* RatedMovieModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -217,7 +214,6 @@
 				DC4609E22B68E29500106F83 /* ViewController.swift in Sources */,
 				DC460A0A2B69029100106F83 /* APIkey.swift in Sources */,
 				DC4609F92B68ECF800106F83 /* PosterImageView.swift in Sources */,
-				DC460A122B6920D300106F83 /* RatedMovieModel.swift in Sources */,
 				DC4609F72B68EC1800106F83 /* TrendCollectionViewCell.swift in Sources */,
 				DC4609DE2B68E29500106F83 /* AppDelegate.swift in Sources */,
 				DC4609E02B68E29500106F83 /* SceneDelegate.swift in Sources */,

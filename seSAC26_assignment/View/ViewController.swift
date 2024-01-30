@@ -19,7 +19,12 @@ class ViewController: UIViewController {
     let titleList:[String] = ["뜨거운 핫 트렌드!", "평점 높은 TV!", "이보다 더 유명할 수 없는 프로그램"]
     let tableView  = UITableView()
     
-    var movieList:[TV] = []
+    var tvList:[[TV]] = [[],[],[]] {
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: ViewController.configureCollectionView())
     
     override func viewDidLoad() {
@@ -28,12 +33,23 @@ class ViewController: UIViewController {
         configureView()
         setConstraintsView()
         
-        APImanager.shared.fetchTVImages(url: "week") { tvs in
-            self.movieList = tvs
+        APImanager.shared.fetchTVImages(url: "trending/tv/week") { tvs in
+            self.tvList[0] = tvs
             self.collectionView.reloadData()
-            self.tableView.reloadData()
         }
         
+        APImanager.shared.fetchTVImages(url: "tv/top_rated") { tvs in
+            print(tvs)
+            self.tvList[1] = tvs
+            self.collectionView.reloadData()
+//            self.tableView.reloadData()
+        }
+        
+        APImanager.shared.fetchTVImages(url: "tv/popular") { tvs in
+            self.tvList[2] = tvs
+//            self.collectionView.reloadData()
+//            self.tableView.reloadData()
+        }
     }
 
     static func configureCollectionView() -> UICollectionViewLayout {
@@ -88,17 +104,24 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieList.count
+//        return tvList.count
+        return tvList[self.collectionView.tag].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendCollectionViewCell", for: indexPath) as! TrendCollectionViewCell
         
-        let item = movieList[indexPath.row]
+//        let item = tvList[indexPath.row]
+//        let item = tvList[collectionView.tag][indexPath.row]
+        //self로 하니까 왜 똑같은 애들이 나왔을까
+        let item = tvList[collectionView.tag][indexPath.row]
         
-        let url = URL(string: "https://image.tmdb.org/t/p/w500/\(String(describing: item.poster))")
+        if let url = URL(string: "https://image.tmdb.org/t/p/w500/\( item.poster ?? "")") {
+            cell.posterImage.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
+        }else{
+            print("이미지데이터 오류")
+        }
         
-        cell.posterImage.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
         cell.titleLabel.text = item.name
         return cell
     }
@@ -120,10 +143,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
         cell.collectionView.register(TrendCollectionViewCell.self, forCellWithReuseIdentifier: "TrendCollectionViewCell")
+        cell.collectionView.tag = indexPath.row
         cell.lineTitleLabel.text = titleList[indexPath.row]
      
         cell.collectionView.reloadData()
-        
         
         return cell
     }

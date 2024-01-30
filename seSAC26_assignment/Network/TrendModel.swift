@@ -18,7 +18,7 @@ struct TV: Decodable {
     let original_name: String
     let overview: String
     let average: Double?
-    let poster: String
+    let poster: String?
     
     enum CodingKeys: String, CodingKey {
         case id
