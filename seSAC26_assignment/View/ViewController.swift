@@ -16,10 +16,10 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
-    let titleList:[String] = ["뜨거운 핫 트렌드 영화!", "평점 높은 영화!", "이보다 더 유명할 수 없는 영화"]
+    let titleList:[String] = ["뜨거운 핫 트렌드!", "평점 높은 TV!", "이보다 더 유명할 수 없는 프로그램"]
     let tableView  = UITableView()
     
-    var movieList:[Movie] = []
+    var movieList:[TV] = []
    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: ViewController.configureCollectionView())
     
     override func viewDidLoad() {
@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         configureView()
         setConstraintsView()
         
-        APImanager.shared.fetchTrendMovieImages { movies in
-            self.movieList = movies
+        APImanager.shared.fetchTVImages(url: "week") { tvs in
+            self.movieList = tvs
             self.collectionView.reloadData()
             self.tableView.reloadData()
         }
@@ -96,10 +96,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         let item = movieList[indexPath.row]
         
-        let url = URL(string: "https://image.tmdb.org/t/p/w500/\(item.poster)")
+        let url = URL(string: "https://image.tmdb.org/t/p/w500/\(String(describing: item.poster))")
         
         cell.posterImage.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
-        cell.titleLabel.text = item.title
+        cell.titleLabel.text = item.name
         return cell
     }
     

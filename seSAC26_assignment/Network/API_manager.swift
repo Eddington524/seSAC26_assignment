@@ -11,16 +11,19 @@ import Alamofire
 class APImanager {
     
     static let shared = APImanager()
+    let header: HTTPHeaders = ["Authorization": APIkey.TMDB]
+    let baseUrl: String = "https://api.themoviedb.org/3/trending/tv/"
     
-    func fetchTrendMovieImages(completehandler: @escaping(([Movie]) -> Void)){
-        let url = "https://api.themoviedb.org/3/trending/movie/week?language=ko-KR"
+    func fetchTVImages(url: String,completehandler: @escaping(([TV]) -> Void)){
         
-        let header: HTTPHeaders = ["Authorization": APIkey.TMDB]
+        let url = baseUrl + "\(url)"
+        
+        let header = header
         
         AF.request(url, headers: header).responseDecodable(of: TrendModel.self) { response in
             switch response.result {
             case .success(let success):
-//                print("success", success)
+                print("success", success)
                 completehandler(success.results)
             case .failure(let failure):
                 print(failure)
@@ -28,4 +31,10 @@ class APImanager {
         }
         
     }
+    
+//    func fetchRatedMovies(){
+//        let url = "https://api.themoviedb.org/3/tv/top_rated"
+//        
+//        let header:
+//    }
 }

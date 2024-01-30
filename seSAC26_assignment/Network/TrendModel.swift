@@ -9,23 +9,23 @@ import Foundation
 
 struct TrendModel: Decodable {
     let page: Int
-    let results: [Movie]
+    let results: [TV]
 }
 
-struct Movie: Decodable {
+struct TV: Decodable {
     let id: Int
-    let title: String
-    let original_title: String
+    let name: String
+    let original_name: String
     let overview: String
-    let backdrop: String
+    let average: Double?
     let poster: String
     
     enum CodingKeys: String, CodingKey {
         case id
-        case title
-        case original_title
+        case name
+        case original_name
         case overview
-        case backdrop = "backdrop_path"
+        case average = "vote_average"
         case poster = "poster_path"
     }
 }
