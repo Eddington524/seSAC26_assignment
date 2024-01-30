@@ -11,9 +11,13 @@
 
 
 import UIKit
+import SnapKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
+    
+    var movieList:[Movie] = []
    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: ViewController.configureCollectionView())
     
     override func viewDidLoad() {
@@ -21,12 +25,18 @@ class ViewController: UIViewController {
         configureHierachy()
         configureView()
         setConstraintsView()
+        
+        APImanager.shared.fetchTrendMovieImages { movies in
+            self.movieList = movies
+            self.collectionView.reloadData()
+        }
+        
     }
 
     static func configureCollectionView() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         //1) 아이템사이즈
-        layout.itemSize  = CGSize(width: UIScreen.main.bounds.width, height: 200)
+        layout.itemSize  = CGSize(width: UIScreen.main.bounds.width/3, height: 200)
         //2) mini spacing, interItemSpacing
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
@@ -52,7 +62,7 @@ class ViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(12)
-            make.height.equalTo(200)
+            make.height.equalTo(260)
         }
     }
     
@@ -62,11 +72,17 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendCollectionViewCell", for: indexPath) as! TrendCollectionViewCell
+        
+        let item = movieList[indexPath.row]
+        
+        let url = URL(string: "https://image.tmdb.org/t/p/w500/\(item.poster)")
+        
+        cell.posterImage.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
         
         return cell
     }

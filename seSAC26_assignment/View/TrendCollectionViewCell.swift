@@ -29,8 +29,8 @@ class TrendCollectionViewCell: UICollectionViewCell {
     }
     
     func configureView(){
-        posterImage.image = UIImage(systemName: "star")
-        titleLabel.text = "야호 임시타이틀!"
+//        posterImage.image = UIImage(systemName: "star")
+        titleLabel.text = "임시타이틀!"
     }
     
     func setupConstraints() {
@@ -39,7 +39,8 @@ class TrendCollectionViewCell: UICollectionViewCell {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.horizontalEdges.bottom.equalTo(contentView)
+            make.horizontalEdges.equalTo(contentView)
+            make.top.equalTo(contentView.snp.bottom).offset(4)
             make.height.equalTo(20)
         }
         
