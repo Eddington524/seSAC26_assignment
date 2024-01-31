@@ -20,12 +20,21 @@
 		DC4609FF2B68EEFD00106F83 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC4609FE2B68EEFD00106F83 /* Alamofire */; };
 		DC460A022B68EF0500106F83 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC460A012B68EF0500106F83 /* SnapKit */; };
 		DC460A042B68EF0500106F83 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DC460A032B68EF0500106F83 /* SnapKit-Dynamic */; };
-		DC460A062B68FDEC00106F83 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A052B68FDEC00106F83 /* TrendModel.swift */; };
+		DC460A062B68FDEC00106F83 /* TvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A052B68FDEC00106F83 /* TvModel.swift */; };
 		DC460A082B69025C00106F83 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC460A072B69025C00106F83 /* .gitignore */; };
 		DC460A0A2B69029100106F83 /* APIkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A092B69029100106F83 /* APIkey.swift */; };
 		DC460A0C2B6903ED00106F83 /* API_manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0B2B6903ED00106F83 /* API_manager.swift */; };
-		DC460A0E2B69129700106F83 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */; };
-		DC460A102B69131800106F83 /* lineTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0F2B69131800106F83 /* lineTitleLabel.swift */; };
+		DC460A0E2B69129700106F83 /* TvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0D2B69129700106F83 /* TvTableViewCell.swift */; };
+		DC460A102B69131800106F83 /* LineTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A0F2B69131800106F83 /* LineTitleLabel.swift */; };
+		DC460A202B6A355500106F83 /* TvInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A1F2B6A355500106F83 /* TvInfoViewController.swift */; };
+		DC460A242B6A372800106F83 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A232B6A372800106F83 /* BaseViewController.swift */; };
+		DC460A262B6A3BA600106F83 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A252B6A3BA600106F83 /* InfoTableViewCell.swift */; };
+		DC460A292B6A3ED500106F83 /* configureViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A282B6A3ED500106F83 /* configureViewProtocol.swift */; };
+		DC460A2C2B6A49D500106F83 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A2B2B6A49D500106F83 /* ReusableProtocol.swift */; };
+		DC460A2E2B6A4D5C00106F83 /* DarkgrayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A2D2B6A4D5C00106F83 /* DarkgrayLabel.swift */; };
+		DC460A302B6A5ECC00106F83 /* InnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A2F2B6A5ECC00106F83 /* InnerCollectionViewCell.swift */; };
+		DC460A322B6ABFF000106F83 /* ActorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A312B6ABFF000106F83 /* ActorCollectionViewCell.swift */; };
+		DC460A342B6AC07D00106F83 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC460A332B6AC07D00106F83 /* ProfileImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +49,21 @@
 		DC4609F22B68EA4300106F83 /* BlackTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackTitleLabel.swift; sourceTree = "<group>"; };
 		DC4609F62B68EC1800106F83 /* TrendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC4609F82B68ECF800106F83 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
-		DC460A052B68FDEC00106F83 /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
+		DC460A052B68FDEC00106F83 /* TvModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvModel.swift; sourceTree = "<group>"; };
 		DC460A072B69025C00106F83 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DC460A092B69029100106F83 /* APIkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkey.swift; sourceTree = "<group>"; };
 		DC460A0B2B6903ED00106F83 /* API_manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_manager.swift; sourceTree = "<group>"; };
-		DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		DC460A0F2B69131800106F83 /* lineTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineTitleLabel.swift; sourceTree = "<group>"; };
+		DC460A0D2B69129700106F83 /* TvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvTableViewCell.swift; sourceTree = "<group>"; };
+		DC460A0F2B69131800106F83 /* LineTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTitleLabel.swift; sourceTree = "<group>"; };
+		DC460A1F2B6A355500106F83 /* TvInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvInfoViewController.swift; sourceTree = "<group>"; };
+		DC460A232B6A372800106F83 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DC460A252B6A3BA600106F83 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		DC460A282B6A3ED500106F83 /* configureViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configureViewProtocol.swift; sourceTree = "<group>"; };
+		DC460A2B2B6A49D500106F83 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		DC460A2D2B6A4D5C00106F83 /* DarkgrayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkgrayLabel.swift; sourceTree = "<group>"; };
+		DC460A2F2B6A5ECC00106F83 /* InnerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC460A312B6ABFF000106F83 /* ActorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC460A332B6AC07D00106F83 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,9 @@
 		DC4609DC2B68E29500106F83 /* seSAC26_assignment */ = {
 			isa = PBXGroup;
 			children = (
+				DC460A2A2B6A401D00106F83 /* Base */,
+				DC460A272B6A3EA400106F83 /* Protocol */,
+				DC460A1E2B6A235900106F83 /* DramaInfo */,
 				DC4609F52B68EB8100106F83 /* View */,
 				DC4609F42B68EB7100106F83 /* Network */,
 				DC4609F12B68EA1300106F83 /* CustomView */,
@@ -100,8 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				DC4609F22B68EA4300106F83 /* BlackTitleLabel.swift */,
+				DC460A2D2B6A4D5C00106F83 /* DarkgrayLabel.swift */,
 				DC4609F82B68ECF800106F83 /* PosterImageView.swift */,
-				DC460A0F2B69131800106F83 /* lineTitleLabel.swift */,
+				DC460A0F2B69131800106F83 /* LineTitleLabel.swift */,
+				DC460A332B6AC07D00106F83 /* ProfileImageView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -109,7 +132,7 @@
 		DC4609F42B68EB7100106F83 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DC460A052B68FDEC00106F83 /* TrendModel.swift */,
+				DC460A052B68FDEC00106F83 /* TvModel.swift */,
 				DC460A092B69029100106F83 /* APIkey.swift */,
 				DC460A0B2B6903ED00106F83 /* API_manager.swift */,
 			);
@@ -121,9 +144,37 @@
 			children = (
 				DC4609E12B68E29500106F83 /* ViewController.swift */,
 				DC4609F62B68EC1800106F83 /* TrendCollectionViewCell.swift */,
-				DC460A0D2B69129700106F83 /* MovieTableViewCell.swift */,
+				DC460A0D2B69129700106F83 /* TvTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DC460A1E2B6A235900106F83 /* DramaInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DC460A1F2B6A355500106F83 /* TvInfoViewController.swift */,
+				DC460A252B6A3BA600106F83 /* InfoTableViewCell.swift */,
+				DC460A2F2B6A5ECC00106F83 /* InnerCollectionViewCell.swift */,
+				DC460A312B6ABFF000106F83 /* ActorCollectionViewCell.swift */,
+			);
+			path = DramaInfo;
+			sourceTree = "<group>";
+		};
+		DC460A272B6A3EA400106F83 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DC460A282B6A3ED500106F83 /* configureViewProtocol.swift */,
+				DC460A2B2B6A49D500106F83 /* ReusableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DC460A2A2B6A401D00106F83 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DC460A232B6A372800106F83 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,17 +260,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC460A0E2B69129700106F83 /* MovieTableViewCell.swift in Sources */,
-				DC460A062B68FDEC00106F83 /* TrendModel.swift in Sources */,
+				DC460A0E2B69129700106F83 /* TvTableViewCell.swift in Sources */,
+				DC460A062B68FDEC00106F83 /* TvModel.swift in Sources */,
 				DC4609E22B68E29500106F83 /* ViewController.swift in Sources */,
+				DC460A2E2B6A4D5C00106F83 /* DarkgrayLabel.swift in Sources */,
 				DC460A0A2B69029100106F83 /* APIkey.swift in Sources */,
+				DC460A322B6ABFF000106F83 /* ActorCollectionViewCell.swift in Sources */,
 				DC4609F92B68ECF800106F83 /* PosterImageView.swift in Sources */,
+				DC460A292B6A3ED500106F83 /* configureViewProtocol.swift in Sources */,
+				DC460A2C2B6A49D500106F83 /* ReusableProtocol.swift in Sources */,
+				DC460A242B6A372800106F83 /* BaseViewController.swift in Sources */,
+				DC460A302B6A5ECC00106F83 /* InnerCollectionViewCell.swift in Sources */,
+				DC460A262B6A3BA600106F83 /* InfoTableViewCell.swift in Sources */,
+				DC460A342B6AC07D00106F83 /* ProfileImageView.swift in Sources */,
 				DC4609F72B68EC1800106F83 /* TrendCollectionViewCell.swift in Sources */,
 				DC4609DE2B68E29500106F83 /* AppDelegate.swift in Sources */,
 				DC4609E02B68E29500106F83 /* SceneDelegate.swift in Sources */,
-				DC460A102B69131800106F83 /* lineTitleLabel.swift in Sources */,
+				DC460A102B69131800106F83 /* LineTitleLabel.swift in Sources */,
 				DC460A0C2B6903ED00106F83 /* API_manager.swift in Sources */,
 				DC4609F32B68EA4300106F83 /* BlackTitleLabel.swift in Sources */,
+				DC460A202B6A355500106F83 /* TvInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

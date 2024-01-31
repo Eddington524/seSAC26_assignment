@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         group.enter()
         APImanager.shared.fetchTVImages(url: "tv/top_rated") { tvs in
             self.tvList[1] = tvs
-            self.collectionView.reloadData()
+//            self.collectionView.reloadData()
             group.leave()
         }
         group.enter()
@@ -109,7 +109,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
 //        let item = tvList[indexPath.row]
 //        let item = tvList[collectionView.tag][indexPath.row]
-        //self로 하니까 왜 똑같은 애들이 나왔을까
         let item = tvList[collectionView.tag][indexPath.row]
         
         if let url = URL(string: "https://image.tmdb.org/t/p/w500/\( item.poster ?? "")") {

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MovieTableViewCell: UITableViewCell {
+class TvTableViewCell: UITableViewCell {
 
     let lineTitleLabel = LineTitleLabel()
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionView())
@@ -28,7 +28,7 @@ class MovieTableViewCell: UITableViewCell {
     
     func configureView(){
 //        backgroundColor = .systemMint
-        lineTitleLabel.text = "테스트섹션 라벨 입니당"
+//        lineTitleLabel.text = "테스트섹션 라벨 입니당"
 //        collectionView.backgroundColor = .clear
     }
     
